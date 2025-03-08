@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "framer-motion";
 const Page = () => {
 
   const addProduct = async () => {
@@ -34,23 +34,30 @@ const Page = () => {
       {/* Add product form */}
         <div className="flex justify-center items-center h-screen">
 
-        <div className="rounded-full border-cyan-500 h-24 w-24 flex justify-center items-center border-2 border-dotted">
+        <motion.div className="rounded-full border-cyan-500 h-44 w-44 flex justify-center items-center border-2 border-dotted"
+        whileHover={{ rotate: 360 }}
+        transition={{ duration: 1, ease: "linear" }}
+        >
 
-          <div className="rounded-full border-cyan h-16 w-16 flex justify-center items-center border-2 border-dashed">
+          <motion.div className="rounded-full border-cyan h-36 w-36 flex justify-center items-center border-2 border-dashed"
+          whileHover={{ rotate: 360 }}
+          transition={{ duration: 3, ease: "easeIn" }}
+          
+          >
 
            
-            <div className="rounded-full border-white h-12 w-12 flex justify-center items-center border-2">
+            <div className="rounded-full border-white h-32 w-32 flex justify-center items-center border-2">
 
               <button
-              className="rounded-full border-2 border-cyan-400 h-6 w-6 bg-cyan-400"
+              className="rounded-full border-2 border-cyan-400 h-20 w-20 bg-cyan-400 hover:h-12 hover:w-12"
                 onClick={addProduct}>
               </button>
 
             </div>
 
-          </div>
+          </motion.div>
 
-        </div>
+        </motion.div>
           
         </div>
       </div>
