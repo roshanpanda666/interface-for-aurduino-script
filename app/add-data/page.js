@@ -26,19 +26,32 @@ const Page = () => {
   };
 
   return (
-    <div className="p-4 sm:p-8 max-w-7xl mx-auto">
+    <div>
 
 
       {/* Search bar with dropdown */}
 
       {/* Add product form */}
-        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
-          <button
-            onClick={addProduct}
-            className="border-2 border-blue-300 bg-blue-300 text-black w-full sm:w-32 py-2 rounded-md hover:border-green-400"
-          >
-            click
-          </button>
+        <div className="flex justify-center items-center h-screen">
+
+        <div className="rounded-full border-cyan-500 h-24 w-24 flex justify-center items-center border-2 border-dotted">
+
+          <div className="rounded-full border-cyan h-16 w-16 flex justify-center items-center border-2 border-dashed">
+
+           
+            <div className="rounded-full border-white h-12 w-12 flex justify-center items-center border-2">
+
+              <button
+              className="rounded-full border-2 border-cyan-400 h-6 w-6 bg-cyan-400"
+                onClick={addProduct}>
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+          
         </div>
       </div>
   );
