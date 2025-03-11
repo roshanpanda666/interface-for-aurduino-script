@@ -4,6 +4,10 @@ const Page = () => {
 
   const addProduct = async () => {
 
+    if (navigator.vibrate) {
+      navigator.vibrate([50,1,50]); // Vibrates for 200ms, pauses for 100ms, and vibrates for 200ms
+    }
+
     let response = await fetch("/api/dataa", {
       method: "POST",
       headers: {
@@ -23,6 +27,7 @@ const Page = () => {
     } else {
       alert("Failed to add data");
     }
+
   };
 
   return (
