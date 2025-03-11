@@ -23,6 +23,7 @@ const Page = () => {
     if (result.success) {
       let audio=new Audio("/repulser.mp3")
       audio.play()
+      console.log("data added successfully");
       
     } else {
       alert("Failed to add data");
