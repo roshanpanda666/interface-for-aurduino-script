@@ -7,8 +7,7 @@ const Page = () => {
       navigator.vibrate([50,1,50]); // Vibrates for 200ms, pauses for 100ms, and vibrates for 200ms
     }
 
-    let audio=new Audio("/repulser.mp3")
-    audio.play()
+    
 
     let response = await fetch("/api/dataa", {
       method: "POST",
@@ -22,7 +21,8 @@ const Page = () => {
 
     const result = await response.json();
     if (result.success) {
-     alert("data added successfully")
+      let audio=new Audio("/repulser.mp3")
+      audio.play()
       
     } else {
       alert("Failed to add data");
