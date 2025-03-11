@@ -1,12 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
 const Page = () => {
-
   const addProduct = async () => {
-
+   
     if (navigator.vibrate) {
       navigator.vibrate([50,1,50]); // Vibrates for 200ms, pauses for 100ms, and vibrates for 200ms
     }
+
+    let audio=new Audio("/repulser.mp3")
+    audio.play()
 
     let response = await fetch("/api/dataa", {
       method: "POST",
@@ -20,10 +22,8 @@ const Page = () => {
 
     const result = await response.json();
     if (result.success) {
-      alert("Product added successfully");
-      setTimeout(() => {
-        window.location.reload();
-      }, 2000);
+     alert("data added successfully")
+      
     } else {
       alert("Failed to add data");
     }
